@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* CSS styles */
+    .question {
+      margin-bottom: 20px;
+    }
+
+    .options {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .option {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="question">
+    <h2>Would you Buy It for Me ?? </h2>
+    <img src="C:\Users\senth\Desktop\fun_1\OIP.jpeg" alt=" " width="200" height="150">
+  </div>
+  
+  <div class="options">
+    
+    <button class="option" id="london" onclick="showAlert('london')">Yes</button>
+    <button class="option" id="paris" onmouseover="moveRandomly('paris')">No</button>
+  </div>
+  
+  <script>
+    // JavaScript code
+    function showAlert() {
+      alert('Thanks For Your Love !');
+    }
+    function moveRandomly(option) {
+      if (option === 'paris') {
+        var button = document.getElementById('paris');
+        button.style.position = 'absolute';
+        button.style.left = Math.random() * (window.innerWidth - button.clientWidth) + 'px';
+        button.style.top = Math.random() * (window.innerHeight - button.clientHeight) + 'px';
+      }
+    }
+
+    function checkAnswer(answer) {
+      if (answer === 'paris') {
+        alert('Correct!');
+      } else {
+        alert('Incorrect!');
+      }
+    }
+  </script>
+</body>
+</html>
